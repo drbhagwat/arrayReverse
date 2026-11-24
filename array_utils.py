@@ -1,8 +1,9 @@
-# initialize the array with no elements
+# create an empty array
 numbers = []
 
-# maximum number of elements that can be stored in the array
+# maximum number of elements that can be stored in this array
 MAX_ELEMENTS = 100000
+
 
 def get_integer(prompt, minimum=None, maximum=None):
     while True:
@@ -26,16 +27,18 @@ def get_integer(prompt, minimum=None, maximum=None):
             print("\nInput interrupted. Exiting program.")
             raise
 
-def swap(data, i, j) :
+
+def swap(data, i, j):
     temp = data[i]
     data[i] = data[j]
     data[j] = temp
 
-def reverse(data) :
+
+def reverse(data):
     left = 0
     right = len(data) - 1
 
-    while left < right :
+    while left < right:
         swap(data, left, right)
         left = left + 1
-        right = right -1
+        right = right - 1
